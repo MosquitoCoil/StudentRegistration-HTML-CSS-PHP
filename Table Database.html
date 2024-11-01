@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Table Database</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <th>ID</th>
+                <th>LAST NAME</th>
+                <th>FIRST NAME</th>
+                <th>MIDDLE NAME</th>
+                <th>COURSE</th>
+                <th>YEAR</th>
+                <th>CAMPUS</th>
+            </tr>
+            <?php
+            $conn = mysqli ('localhost', 'root', '', 'qc_registration_form_data')
+            if ($conn-> connect_error) {
+                die("Connection failed:" .$conn-> connect_error);
+            }
+            $sql = "SELECT id, last_name, fisrt_name, middle_name, course, years, campus from registration_table ";
+            $result = $conn-> query($sql);
+
+            if($result-> num_rows > 0) {
+                while ($row = $result-> fetch_assoc()){
+                    echo "<tr><td>" . $row["id"] ."</td><td>" .$row["last_name"] ."</td><td>" .$row["first_name"] ."</td><td>" .$row["middle_name"] ."</td><td>"
+                        .$row["course"] ."</td><td>" .$row["years"] ."</td><td>" .$row["campus"] ."</td></tr>"
+                }
+                echo "</table>";
+            }
+            else{
+                echo "0 result";
+            }
+
+            $conn-> close();
+            ?>
+        </table>
+    </body>
+</html>

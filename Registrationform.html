@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>QUEZON CITY UNIVERSITY</title>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="style">
+            <h1>QUEZON CITY UNIVERSITY</h1> 
+            <h4>(Formerly Quezon City Polytechnic University)</h4>
+            <h2>CERTIFICATE OF REGISTRATION</h2><br>
+            <h3>AY:2020-2021 <br> <br>
+        </div>
+        <div class="form">
+            <h1>Registration Form</h1>
+        </div>
+        <div class="main">
+            <form action="Sign_Up.php" method="POST">
+                <div id="name">
+                    <h2 class="name">Student<br>_____________________________________________________________________________________________________</h2><br><br>
+                    <label class="name">Last name</label>
+                    <input type="text" class="sname" name="lastname_input" placeholder="last name" value=""/>
+                    <label class="name">First name</label>
+                    <input type="text" class="sname" name="firstname_input" placeholder="first name" value=""/>                
+                    <label class="name">Middle name</label>
+                    <input type="text" class="sname" name="middlename_input" placeholder="middle name" value=""/>
+                </div>
+                <h2 class="name">Course:</h2><br>
+                <select class="option" name="course_input">
+                    <option class="option" disabled="disabled" selected="selected">Course:</option>
+                    <option class="option" value="BS ACCOUNTANCY">BS ACCOUNTANCY</option>
+                    <option class="option" value="BS ENTERPRENUERSHIP">BS ENTREPRENEURSHIP</option>
+                    <option class="option" value="BS INFROMATION TECHNOLOGY">BS INFORMATION TECHNOLOGY</option>
+                </select>
+                <h2 class="name">Year:</h2><br>
+                <label></label>
+                <input type="radio" name="year_input" value="1st Year">  1st Year</option>
+                <input type="radio" name="year_input" value="2nd Year">  2nd Year</option>
+                <input type="radio" name="year_input" value="3rd Year">  3rd Year</option>
+                <input type="radio" name="year_input" value="4th Year">  4th Year</option>
+                </label><br>
+                <h2 class="name">Campus:</h2><br>
+                <select class="option" name="campus_input">
+                    <option class="option" disabled="disabled" selected="selected">Campus:</option>
+                    <option class="option" value="Batasan Hills">Batasan Hills</option>
+                    <option class="option" value="San Bartolome">San Bartolome</option>
+                    <option class="option" value="San Francisco">San Francisco</option>
+                <h2><input name="Sign_Up" type="submit" class="greenButton" value="Sign Up" /></h2>
+            </form>
+        </div>
+    </body>
+</html>
