@@ -30,8 +30,8 @@ SET time_zone = "+00:00";
 CREATE TABLE `registration_tbl` (
   `studentID` int(11) NOT NULL,
   `lastname` varchar(255) DEFAULT NULL,
-  `firstName` varchar(255) DEFAULT NULL,
-  `middleName` varchar(255) DEFAULT NULL,
+  `firstname` varchar(255) DEFAULT NULL,
+  `middlename` varchar(255) DEFAULT NULL,
   `course` varchar(255) DEFAULT NULL,
   `yr` varchar(255) DEFAULT NULL,
   `campur` varchar(255) DEFAULT NULL
