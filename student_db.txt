@@ -1,0 +1,9 @@
+CREATE TABLE `registration_tlb` (
+  `studentID` int(11) AUTO_INCREAMENT NOT NULL,
+  `lastname` varchar(50),
+  `firstname` varchar(50),
+  `middlename` varchar(50),
+  `course` varchar(50),
+  `years` varchar(20),
+  `campus` varchar(50)
+)

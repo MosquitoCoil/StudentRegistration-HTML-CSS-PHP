@@ -45,7 +45,7 @@
                     <option class="option" value="Batasan Hills">Batasan Hills</option>
                     <option class="option" value="San Bartolome">San Bartolome</option>
                     <option class="option" value="San Francisco">San Francisco</option>
-                <a href = "Registration.php"><h2><input name="Sign_Up" type="submit" class="SubmitButton" value="Sign Up"/></h2></a>
+                <a href = "Registration.php"><h2><input name="Sign_Up" type="submit" class="SubmitButton" value="Submit"/></h2></a>
             </form>
         </div>
     </body>

@@ -1,8 +1,8 @@
 <?php 
-    ini_set('display_errors', 0); 
-    ini_set('display_startup_errors', 0); 
+    ini_set('display_errors', 1);
+    ini_set('display_startup_errors', 1);
     error_reporting(E_ALL);
-    $mysql = new mysqli("localhost", "root", "", "qc_registration_form_data");
+    $mysql = new mysqli("localhost", "root", "", "student_db");
 
         if ($mysql->connect_errno) {
             echo "Failed to connect to MySQL: " . $mysql->connect_error;
@@ -22,7 +22,7 @@
         ($year != "" AND isset($_POST['year_input'])) AND
         ($campus != "" AND isset($_POST['campus_input']))) {  
 
-        $mysql->query("INSERT INTO registration_table (last_name, first_name, middle_name, course, years, campus) VALUES ('{$lastname}','{$firstname}','{$middlename}','{$course}','{$year}','{$campus}');");
+        $mysql->query("INSERT INTO registration_tbl (lastname, firstname, middlename, course, years, campus) VALUES ('{$lastname}','{$firstname}','{$middlename}','{$course}','{$year}','{$campus}');");
         $mysql->close();
     }
 ?>

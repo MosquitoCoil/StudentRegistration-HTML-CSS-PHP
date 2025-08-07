@@ -24,25 +24,25 @@
                 <th>CAMPUS</th>
             </tr>
             <?php
-            $conn = new mysqli ('localhost', 'root', '', 'qc_registration_form_data');
+            $conn = new mysqli ('localhost', 'root', '', 'student_db');
             if ($conn->connect_error) {
                 die("Connection failed:" .$conn-> connect_error);
             }
             $result = null;
             if (isset($_POST['search']) AND $_POST['valuetosearch'] != "") {
                 $valuetosearch = $_POST['valuetosearch'];
-                $searchsql = "SELECT * FROM `registration_table` WHERE CONCAT (`id`, `last_name`, `first_name`, `middle_name`, `course`, `years`, `campus`)  LIKE '%".$valuetosearch."%'";
+                $searchsql = "SELECT * FROM `registration_table` WHERE CONCAT (`studentID`, `lastname`, `firstname`, `middlename`, `course`, `years`, `campus`)  LIKE '%".$valuetosearch."%'";
                 $result = $conn-> query($searchsql);
             }
 
             else{
-                $displaysql = "SELECT  last_name, first_name, middle_name, course, years, campus from registration_table limit 10 ";
+                $displaysql = "SELECT  lastname, firstname, middlename, course, years, campus from registration_tbl limit 10 ";
                 $result = $conn-> query($displaysql);
             }
 
             if($result->num_rows > 0) {
                 while ($row = $result-> fetch_assoc()){
-                    echo "<tr><td>"  ."</td><td>" .$row["last_name"] ."</td><td>" .$row["first_name"] ."</td><td>" .$row["middle_name"] ."</td><td>"
+                    echo "<tr><td>"  ."</td><td>" .$row["lastname"] ."</td><td>" .$row["firstname"] ."</td><td>" .$row["middlename"] ."</td><td>"
                         .$row["course"] ."</td><td>" .$row["years"] ."</td><td>" .$row["campus"] ."</td></tr>";
                 }
                 echo "</table>";
